@@ -1,20 +1,47 @@
-// Magic8.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <cstdlib>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Magic 8-Ball\n";
+
+    srand(time(NULL));
+    int answer = std::rand() % 10;
+
+    //Using If Else, the output of the magic 8 ball will be decided based on the random value produce
+    if (answer == 0) {
+        std::cout << "It is certain.";
+    }
+    else if (answer == 10) {
+        std::cout << "As I see it, yes.";
+    }
+    else if (answer == 9) {
+        std::cout << "Better not tell you now.";
+    }
+    else if (answer == 8) {
+        std::cout << "Concentrate and ask again.";
+    }
+    else if (answer == 7) {
+        std::cout << "Don't count on it.";
+    }
+    else if (answer == 6) {
+        std::cout << "Very doubtfull.";
+    }
+    else if (answer == 5) {
+        std::cout << "Cannot predict now.";
+    }
+    else if (answer == 4) {
+        std::cout << "Most likely.";
+    }
+    else if (answer == 3) {
+        std::cout << "Yes.";
+    }
+    else if (answer == 2) {
+        std::cout << "Outlook not so good.";
+    }
+    else if (answer == 1) {
+        std::cout << "Outlook good.";
+    }
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
